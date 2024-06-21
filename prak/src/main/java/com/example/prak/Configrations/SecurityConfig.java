@@ -22,7 +22,6 @@ import org.springframework.security.web.SecurityFilterChain;
 @RequiredArgsConstructor
 public class SecurityConfig {
 
-    private final CustomUserDetailsService userDetailService;
 
     @Bean
     protected SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
@@ -51,7 +50,7 @@ public class SecurityConfig {
     }
 
     @Bean
-     PasswordEncoder passwordEncoder() {
+    PasswordEncoder passwordEncoder() {
         return new  BCryptPasswordEncoder(8);
     }
 }

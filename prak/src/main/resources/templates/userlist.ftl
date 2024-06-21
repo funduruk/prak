@@ -33,5 +33,11 @@
 <form action="/emptyNumber" method="get">
     <button type="submit">Пустые номера</button>
 </form>
+
+<form action="/generate" method="get">
+    <input type="number" name="id" placeholder="Напишите ID студента">
+    <button type="submit">скачать инфоормацию о студенте</button>
+</form>
+
 </body>
 </html>

@@ -103,11 +103,9 @@ public class Student {
         this.birthdate = birthdate;
     }
 
-        @Override
-        public String toString() {
-            return id + "|" + lastname + "|" + middlename + "|" + lastname + "|" + phonenumber + "|" + birthdate + "|" + email + "|" + status;
+    @Override
+    public String toString() {
+        return id + "|" + lastname + "|" + middlename + "|" + lastname + "|" + phonenumber + "|" + birthdate + "|" + email + "|" + status;
 
     }
 }
-
-

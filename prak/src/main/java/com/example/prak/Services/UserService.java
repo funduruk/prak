@@ -9,6 +9,8 @@ import org.apache.catalina.User;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.security.Principal;
+
 @Service
 @Slf4j
 @RequiredArgsConstructor
@@ -27,5 +29,12 @@ public class UserService {
         return true;
 
     }
+    public Users getUserByPrincipal(Principal principal) {
+        if (principal == null) return new Users();
+        return userRepository.findByEmail(principal.getName());
+    }
+
+
+
 
 }

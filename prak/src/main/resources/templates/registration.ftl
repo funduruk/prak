@@ -32,7 +32,7 @@
 <body>
 <h1>Registration</h1>
 <form name="registrationForm" action="/registration" method="post" onsubmit="return validateForm()">
-    Username: <input type="text" name="username" required>
+    Username: <input type="text" name="name" required>
     Email: <input type="email" name="email" required>
     Number phone: <input type="text" name="phoneNumber" required>
     Password: <input type="password" name="password" required>

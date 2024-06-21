@@ -30,4 +30,14 @@ public class StudentService {
     public List<Student> findEmptyStudent(){
         return studentRepository.findByPhonenumber(null);
     }
+
+    public List<Student> findAll(){
+        return studentRepository.findAll();
+    }
+
+    public Student findById(Long id){
+        return studentRepository.findById(id).orElse(null);
+    }
+
+
 }

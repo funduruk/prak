@@ -1,11 +1,13 @@
 package com.example.prak.Entities;
 
 import com.example.prak.Entities.Enums.Role;
+import com.example.prak.Repositories.UserRepository;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.security.Principal;
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.HashSet;
@@ -37,7 +39,7 @@ public class Users implements UserDetails {
 
     @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
     @CollectionTable(name = "user_role",
-    joinColumns = @JoinColumn(name = "user_id"))
+            joinColumns = @JoinColumn(name = "user_id"))
     @Enumerated(EnumType.STRING)
     private Set<Role> roles = new HashSet<>();
 
@@ -79,4 +81,6 @@ public class Users implements UserDetails {
     public boolean isEnabled() {
         return active;
     }
+
+
 }
